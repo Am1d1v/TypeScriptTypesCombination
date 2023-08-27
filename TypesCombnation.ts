@@ -1,9 +1,7 @@
 
 // Conditional Type
 
-const x = 10;
-const isNegative = x >= 0 ? "no" : "yes";
-
+/*
 interface StringRecord {
     [key: string]: string;
 }
@@ -24,6 +22,16 @@ const obj1: Object1 = {
 const obj2: Object2 = {
     a: new Date(1990, 5, 5)
 }
+*/
+
+// Extends
+
+type answer1 = 60 extends number ? true : false; // true
+type answer2 = number extends 64 ? true : false; // false
+type answer3 = string[] extends any ? true : false; // true
+type answer4 = string[] extends any[] ? true : false; // true
+type answer5 = never extends any ? true : false; // true
+type answer6 = any extends any ? true : false; // true
 
 
 
