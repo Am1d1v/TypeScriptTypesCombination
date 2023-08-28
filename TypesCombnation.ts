@@ -45,8 +45,10 @@ function fromPair(pair: [string, string]){
     }
 }
 
-const myPair1 = ['myKey1', 'myValue1'];
-const pairRes =  fromPair(myPair1 as [string, string]);
+type FirstArg<T> = T extends (first: infer First, ...arg: unknown[]) => any ? First : never;
+
+const myPair1: FirstArg<typeof fromPair> = ['myKey1', 'myValue1'];
+const pairRes =  fromPair(myPair1);
 console.log(pairRes);
 
 
