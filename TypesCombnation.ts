@@ -78,3 +78,32 @@ function PCCatalog(pcCatalog: myPCRecord){
 }
 PCCatalog(brandRecord);
 
+
+type partOfWindow = {
+    [Key in 'document' | 'screen']?: Window[Key];
+}
+
+const p: partOfWindow = {
+    screen: window.screen
+}
+console.log(p);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,3 +10,7 @@ function PCCatalog(pcCatalog) {
     console.log((_a = pcCatalog.Brand1) === null || _a === void 0 ? void 0 : _a.name);
 }
 PCCatalog(brandRecord);
+var p = {
+    screen: window.screen
+};
+console.log(p);
