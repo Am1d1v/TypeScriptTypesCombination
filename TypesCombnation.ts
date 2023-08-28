@@ -37,6 +37,7 @@ type answer6 = any extends any ? true : false; // true
 
 // Infer
 
+/*
 function fromPair(pair: [string, string]){
     const [key, value] = pair;
 
@@ -50,11 +51,30 @@ type FirstArg<T> = T extends (first: infer First, ...arg: unknown[]) => any ? Fi
 const myPair1: FirstArg<typeof fromPair> = ['myKey1', 'myValue1'];
 const pairRes =  fromPair(myPair1);
 console.log(pairRes);
+*/
 
+// Mapped Types
 
+type PCBrand = {
+    name: string;
+    createdAt: Date;
+}
 
+type Brands = 'Brand1' | 'Brand2' | 'Brand3';
 
+type myPCRecord = {
+    [BrandKey in Brands]?: PCBrand;
+}
 
+const brandRecord: myPCRecord = {
+    Brand1: {
+        name: 'SomeBrandName',
+        createdAt: new Date()
+    }
+}
 
-
+function PCCatalog(pcCatalog: myPCRecord){
+    console.log(pcCatalog.Brand1?.name);
+}
+PCCatalog(brandRecord);
 
