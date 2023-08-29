@@ -179,9 +179,13 @@ const todo1:BooleanToDo = {
     completed: true
 }
 
+// Omit
 
+type OmitToDo = Omit <ToDo, 'description' | 'completed'>;
 
-
+const todo2: OmitToDo = {
+    title: 'OmitToDoList'
+}
 
 
 
