@@ -55,6 +55,7 @@ console.log(pairRes);
 
 // Mapped Types
 
+/*
 type PCBrand = {
     name: string;
     createdAt: Date;
@@ -87,6 +88,12 @@ const p: partOfWindow = {
     screen: window.screen
 }
 console.log(p);
+*/
+
+// Utilites
+
+type T0 = Exclude <"a" | "b" | "c", "a">;
+type T1 = Exclude <"a" | "b" | "c", "a" | "b">;
 
 
 
