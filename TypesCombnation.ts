@@ -167,6 +167,7 @@ const myBrands: BrandNames = {
 
 // Pick
 
+/*
 interface ToDo {
     title: string;
     description?: string;
@@ -178,17 +179,26 @@ const todo1:BooleanToDo = {
     title: 'ToDoList',
     completed: true
 }
+*/
 
 // Omit
 
+/*
 type OmitToDo = Omit <ToDo, 'description' | 'completed'>;
 
 const todo2: OmitToDo = {
     title: 'OmitToDoList'
 }
+*/
 
+// Parameters
 
+function f1(arg: {a: number, b: string}){
+     console.log(arg.a + arg.b);
+};
 
+type t0 = ReturnType <typeof f1>;
+type t1 = Parameters <typeof f1>;
 
 
 
