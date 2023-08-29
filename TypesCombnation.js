@@ -1,3 +1,4 @@
 // Conditional Type
-function updateToDo(todo, fieldsToUpdate) {
-}
+var myBrands = {
+    Brand1: 100
+};

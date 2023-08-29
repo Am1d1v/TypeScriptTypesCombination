@@ -131,7 +131,7 @@ type Type001 = NonNullable<string[]| null | undefined>;
 */
 
 // ReadOnly
-
+/*
 interface ToDo {
     title: string;
     description?: string;
@@ -139,14 +139,27 @@ interface ToDo {
     createdAt: Date;
 }
 type ToDoReadOnly = Readonly <ToDo>;
+*/
 
-
+// Partial
+/*
 type ToDoPartial = Partial <ToDo>;
 function updateToDo(todo: ToDo, fieldsToUpdate: ToDoPartial){
-    
+
 }
+*/
 
+// Required
+//type RequiredToDo = Required <ToDo>;
 
+// Record
 
+type Names = Record <string, number>;
 
+type SomeBrands = 'Brand1' | 'Brand2' | 'Brand3';
+type BrandNames = Record <string, number>;
+
+const myBrands: BrandNames = {
+    Brand1: 100
+}
 
