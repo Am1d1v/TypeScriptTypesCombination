@@ -138,10 +138,13 @@ interface ToDo {
     completed: boolean;
     createdAt: Date;
 }
-
 type ToDoReadOnly = Readonly <ToDo>;
 
 
+type ToDoPartial = Partial <ToDo>;
+function updateToDo(todo: ToDo, fieldsToUpdate: ToDoPartial){
+    
+}
 
 
 
