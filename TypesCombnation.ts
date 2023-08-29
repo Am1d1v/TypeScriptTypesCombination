@@ -92,22 +92,25 @@ console.log(p);
 
 // Utilites
 
-
 // Exclude
+/*
 type T0 = Exclude <"a" | "b" | "c", "a">;
 type T1 = Exclude <"a" | "b" | "c", "a" | "b">;
 
 type Status = 'success' | 'clientError' | 'serverError' | 200 | 401 | 504;
 type NumericStatus = Exclude <Status, string>;
 type TextStatus = Exclude <Status, number>;
+*/
 
 
 // Extract
+/*
 type T00 = Extract <"a" | "b" | "c", "a">;
 type T11 = Extract <"a" | "b" | "c", "a" | "b">;
 
 type ExtractStatusText = Extract<Status, string>;
 type ExtractStatusNumber = Extract<Status, number>;
+
 
 
 interface Person {
@@ -119,10 +122,24 @@ interface Person {
 }
 
 type PersonNames = Extract <keyof Person, "name" | "surname">;
+*/
 
 // NonNullable
+/*
 type Type000 = NonNullable<string| number | undefined>;
 type Type001 = NonNullable<string[]| null | undefined>;
+*/
+
+// ReadOnly
+
+interface ToDo {
+    title: string;
+    description?: string;
+    completed: boolean;
+    createdAt: Date;
+}
+
+type ToDoReadOnly = Readonly <ToDo>;
 
 
 
