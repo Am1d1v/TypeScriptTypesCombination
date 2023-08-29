@@ -154,6 +154,7 @@ function updateToDo(todo: ToDo, fieldsToUpdate: ToDoPartial){
 
 // Record
 
+/*
 type Names = Record <string, number>;
 
 type SomeBrands = 'Brand1' | 'Brand2' | 'Brand3';
@@ -162,4 +163,49 @@ type BrandNames = Record <string, number>;
 const myBrands: BrandNames = {
     Brand1: 100
 }
+*/
+
+// Pick
+
+interface ToDo {
+    title: string;
+    description?: string;
+    completed: boolean;
+}
+type BooleanToDo = Pick <ToDo, 'title' | 'completed'>;
+
+const todo1:BooleanToDo = {
+    title: 'ToDoList',
+    completed: true
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

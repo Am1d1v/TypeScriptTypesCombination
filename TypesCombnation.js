@@ -1,4 +1,5 @@
 // Conditional Type
-var myBrands = {
-    Brand1: 100
+var todo1 = {
+    title: 'ToDoList',
+    completed: true
 };
