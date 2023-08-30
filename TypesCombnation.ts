@@ -102,7 +102,6 @@ type NumericStatus = Exclude <Status, string>;
 type TextStatus = Exclude <Status, number>;
 */
 
-
 // Extract
 /*
 type T00 = Extract <"a" | "b" | "c", "a">;
@@ -233,15 +232,27 @@ const arr: someTuple = [1, 'abc', true, 'a', 'b', 'c'];
 type T1 = someTuple[0];
 */
 
+/*
 const sizes = ['small', 'medium', 'large'] as const;
 
 type T2 = typeof sizes[number];
 type T3 = typeof sizes[0];
+*/
+
+// Template Literals
+
+type Side = 'top' | 'right' | 'bottom' | 'left';
+
+type Margin = `margin-${Side}`;
+type Margin2 = `margin-${Capitalize<Side>}`;
+
+type Padding = `padding-${Side}`;
 
 
-
-
-
+type Direction = 'up' | 'right' | 'down' | 'left';
+type Position = 'top' | 'bottom';
+type Entry = 'in' | 'out';
+type FadeClassNames = `fade${Capitalize<Entry>}${Capitalize<'' | Direction | Position>}`;
 
 
 
