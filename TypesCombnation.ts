@@ -193,13 +193,36 @@ const todo2: OmitToDo = {
 
 // Parameters
 
+/*
 function f1(arg: {a: number, b: string}){
      console.log(arg.a + arg.b);
 };
 
 type t0 = ReturnType <typeof f1>;
 type t1 = Parameters <typeof f1>;
+*/
 
+// Indexed TS
+
+interface DataModel  {
+    id: string;
+    title: string;
+    elements: {
+        title: string,
+        description: string,
+    };
+    footer: {
+        description: string;
+    }
+    body: [
+        {
+            title: string,
+            content: {}
+        }
+    ]
+}
+
+type T0 = DataModel['elements']['description'];
 
 
 
