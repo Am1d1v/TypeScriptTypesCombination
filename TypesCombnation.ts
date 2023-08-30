@@ -255,7 +255,15 @@ type Entry = 'in' | 'out';
 type FadeClassNames = `fade${Capitalize<Entry>}${Capitalize<'' | Direction | Position>}`;
 
 
+interface Car {
+    brand: string;
+    model: string;
+    year: number;
+}
 
+type CarFactory = {
+    [k in keyof Car as `set${Capitalize<k>}`]: (car: Car, value: Car[k]) => void;
+}
 
 
 
