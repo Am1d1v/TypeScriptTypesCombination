@@ -204,6 +204,7 @@ type t1 = Parameters <typeof f1>;
 
 // Indexed TS
 
+/*
 interface DataModel  {
     id: string;
     title: string;
@@ -223,11 +224,19 @@ interface DataModel  {
 }
 
 type T0 = DataModel['elements']['description'];
+*/
 
+/*
+type someTuple = [number, string, boolean, ...string[]];
+const arr: someTuple = [1, 'abc', true, 'a', 'b', 'c'];
 
+type T1 = someTuple[0];
+*/
 
+const sizes = ['small', 'medium', 'large'] as const;
 
-
+type T2 = typeof sizes[number];
+type T3 = typeof sizes[0];
 
 
 
